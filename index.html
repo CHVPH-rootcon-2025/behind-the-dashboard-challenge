@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Car Hacking Village CTF - Rootcon 2025</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background: #f5f5f5;
+    }
+    .post {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      padding: 1rem;
+      max-width: 600px;
+    }
+    .post img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .post h2 {
+      margin: 0.5rem 0;
+    }
+    .post small {
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Cars with Awesome Infotainment System (2025)</h1>
+<div id="posts"></div>
+
+<script>
+const POSTS = [
+  {
+    id: 'GMC Acadia',
+    title: '2025 GMC Acadia',
+    img: 'images/01-usnpx-2025gmcacadia-dashboard-jms.jpg',
+    lead: `Midsize SUVs are reliable choices for hassle-free family travel, and though it's not a class leader, the Acadia has the goods to satisfy shoppers in this popular segment. This hauler has a spacious, versatile cabin with second-row captain's chairs that slide back and forth. There's seating for up to eight people, and while it's not as roomy as the first two rows, the third row accommodates adults.<br>
+    <br>    
+     Its infotainment system is one of the Acadia's strong points. The 15-inch touch screen is intuitive and has crisp graphics, and all models have standard features that include wireless smartphone integration and a Wi-Fi hot spot.`,
+  },
+  {
+    id: 'Honda Odyssey',
+    title: '2025 Honda Odyssey',
+    img: 'images/08-2025-honda-odyssey.jpg',
+    lead: `The Odyssey's cabin provides stellar flexibility, with second-row seats that slide forward, backward, and side-to-side. All three rows are adult-friendly, with nicely cushioned seats. This eight-person minivan comes with a stout V6 that delivers relatively quick acceleration, and the ride is pleasant and comfortable.<br>
+<br>
+Honda equips the Odyssey with infotainment tech that boasts a modern look and quick response times. The menus are easy to navigate, and standard features include wireless smartphone integration, satellite radio, and a Wi-Fi hot spot.`,
+  },
+  {
+    id: 'Ram 1500',
+    title: '2025 Ram 1500',
+    img: 'images/2025-ram-1500-rebel-12.jpg',
+    lead: `Today's trucks have come a long way since the unrefined haulers of yesteryear, and the Ram 1500 is one of the best examples of this evolution. Its cabin is remarkably upscale, and its ride quality is comfortable enough for pleasant daily driving. The Ram 1500 gives buyers a choice of brawny powertrains, and it comes standard with driver-assistance features that may help prevent accidents.<br>
+<br>
+This truck steps up its infotainment game for 2025, adding larger standard and available touch screens. An 8.4-inch screen is standard, and 12-inch and 14.4-inch upgrades are available. All models have Apple CarPlay, Android Auto, and a Wi-Fi hot spot. The infotainment system's menus are easy to navigate, and options include wireless device charging.`,
+  }
+];
+
+const container = document.getElementById("posts");
+
+POSTS.forEach(post => {
+  const article = document.createElement("div");
+  article.className = "post";
+  article.innerHTML = `
+    <img src="${post.img}" alt="${post.title}">
+    <h2>${post.title}</h2>
+    <p>${post.lead}</p>
+  `;
+  container.appendChild(article);
+});
+</script>
+
+</body>
+</html>
